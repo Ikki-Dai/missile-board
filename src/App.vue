@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img src="./assets/logo.png">
+    <div>
+      <input v-model="inputValue"/>
+      <el-button @click="sbt">el-button</el-button>
+    </div>
+    <HelloWorld msg="Welcome to Your Vue.js App" :list=list />
   </div>
 </template>
 
@@ -9,7 +13,19 @@
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
+  name: 'app',
+  data () {
+    return {
+      inputValue: '',
+      list : []
+    }
+  },
+  methods: {
+    sbt() {
+      this.list.push(this.inputValue);
+      this.inputValue = '';
+    }
+  },
   components: {
     HelloWorld
   }
@@ -18,7 +34,7 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
