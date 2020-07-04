@@ -1,5 +1,5 @@
 <template>
-  <el-row :gutter="10" style="margin-bottom: 20px;">
+  <!-- <el-row :gutter="10" style="margin-bottom: 20px;">
     <el-col :span="4">
       <el-image :src="src" style="width: 30px; height: 30px">
         <div slot="error" class="image-slot">
@@ -8,10 +8,17 @@
       </el-image>
       <el-link href="./" type="primary">MISSILE</el-link>
     </el-col>
+
+  </el-row> -->
+  <a-row type="flex" justify="center">
+    <a-col :span="6">
+        <img src="../../assets/logo.png" style="width: 30px; height: 30px"/>
+        <a href="./">MISSILE</a>
+    </a-col>
     <Search />
     <Badge />
     <Status />
-  </el-row>
+  </a-row>
 </template>
 
 <script>

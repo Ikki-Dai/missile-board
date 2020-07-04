@@ -2,12 +2,19 @@
 
   <div id="app">
     <Header/>
-    <el-divider/>
+    <!-- <el-divider/> -->
+    <a-divider />
+
+    <!-- <div>
+      <input v-model="inputValue"/>
+      <el-button @click="sbt">el-button</el-button>
+    </div> -->
 
     <div>
       <input v-model="inputValue"/>
-      <el-button @click="sbt">el-button</el-button>
+      <a-button type="primary" @click="sbt">Ant-Button</a-button>
     </div>
+
     <HelloWorld msg="Welcome to Your Vue.js App" :list=list />
   </div>
 </template>
