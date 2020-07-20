@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { Button, Row, Col, Dropdown,
     Icon, Menu, Avatar, Divider, Badge,
-    Input
+    Input, Tabs
 
 } from 'ant-design-vue';
 
@@ -16,3 +16,4 @@ Vue.use(Avatar);
 Vue.use(Divider);
 Vue.use(Badge);
 Vue.use(Input);
+Vue.use(Tabs);
