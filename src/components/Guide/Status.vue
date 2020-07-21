@@ -1,27 +1,29 @@
 <template>
-  <el-col :span="4">
-    <el-dropdown >
-      <el-avatar
-        icon="el-icon-user-solid"
-        fit="scale-down"
-        src="https://avatars3.githubusercontent.com/u/16415439?s=60&v=4"
-      ></el-avatar>
-      <i class="el-icon-arrow-down el-icon--right"></i>
-
-      <el-dropdown-menu>
-        <el-dropdown-item>Signed As {{name}}</el-dropdown-item>
-        <el-dropdown-item>Status</el-dropdown-item>
-        <el-dropdown-item divided>Setting</el-dropdown-item>
-        <el-dropdown-item>Profile</el-dropdown-item>
-        <el-dropdown-item divided>Sign Out</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-col>
+  <a-col :span="2">
+    <a-dropdown> 
+      <a-avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+      <a-menu slot="overlay" @click="handleMenuClick">
+        <a-menu-item key="1">Signed As {{name}}</a-menu-item>
+        <a-menu-item key="2">Status</a-menu-item>
+        <a-menu-divider />
+        <a-menu-item key="3">Setting</a-menu-item>
+        <a-menu-item key="4">Profile</a-menu-item>
+        <a-menu-divider />
+        <a-menu-item key="5">Sign Out</a-menu-item>
+      </a-menu>
+      <!-- <a-icon type="down" /> -->
+    </a-dropdown>
+  </a-col>
 </template>
 
 <script>
 export default {
   name: "Status",
+  methods: {
+    handleMenuClick() {
+      alert("click");
+    }
+  },
   data() {
     return {
       name: "ikki"

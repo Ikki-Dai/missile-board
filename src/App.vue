@@ -1,20 +1,14 @@
 <template>
-
   <div id="app">
     <Header/>
-    <el-divider/>
-
-    <div>
-      <input v-model="inputValue"/>
-      <el-button @click="sbt">el-button</el-button>
-    </div>
-    <HelloWorld msg="Welcome to Your Vue.js App" :list=list />
+    <a-divider />
+    <Board/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Header from './components/Guide/Header.vue'
+import Board from './components/Body/Board.vue'
 
 export default {
   name: 'app',
@@ -41,8 +35,8 @@ export default {
     }
   },
   components: {
-    HelloWorld,
-    Header
+    Header,
+    Board,
   }
 }
 </script>
